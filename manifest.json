@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "GMGN.AI Solana Search",
+  "version": "1.0",
+  "description": "Search Solana wallet addresses (42–44 characters) on GMGN.AI from highlighted text or clipboard.",
+  "permissions": [
+    "contextMenus",
+    "activeTab",
+    "clipboardRead"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
